@@ -27,15 +27,6 @@
 
 <body class="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 font-sans transition-colors duration-200">
 
-    {{-- Theme toggle (fixed corner) --}}
-    <button onclick="guestToggleTheme()" type="button"
-            class="fixed top-4 right-4 z-50 flex items-center justify-center w-9 h-9
-                   bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
-                   rounded-xl shadow-sm hover:shadow-md
-                   text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-white
-                   transition-all duration-150 cursor-pointer">
-        <span id="guestThemeIcon">🌙</span>
-    </button>
 
     <div class="min-h-screen flex flex-col items-center justify-center px-4 py-10 gap-6">
 
@@ -48,7 +39,7 @@
             </div>
             <div class="leading-none">
                 <div class="text-[22px] font-extrabold text-slate-900 dark:text-white tracking-tight">{{ config('app.name', 'AuthVault') }}</div>
-                <div class="text-[11px] text-indigo-500 font-semibold tracking-widest uppercase mt-1">Account Manager</div>
+                <div class="text-[11px] text-indigo-500 font-semibold tracking-widest uppercase mt-1">SavePass</div>
             </div>
         </a>
 
@@ -76,12 +67,7 @@
             if (icon) icon.textContent = dark ? '☀️' : '🌙';
         })();
 
-        function guestToggleTheme() {
-            var dark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('av_theme', dark ? 'dark' : 'light');
-            var icon = document.getElementById('guestThemeIcon');
-            if (icon) icon.textContent = dark ? '☀️' : '🌙';
-        }
+        
     </script>
 </body>
 </html>

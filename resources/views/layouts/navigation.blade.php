@@ -14,7 +14,7 @@
             </div>
             <div>
                 <div class="text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-none">SavePass</div>
-                <div class="text-[11px] text-indigo-500 font-semibold tracking-wide leading-none mt-0.5">Account Manager</div>
+                <div class="text-[11px] text-indigo-500 font-semibold tracking-wide leading-none mt-0.5">SavePass</div>
             </div>
         </a>
 
@@ -24,7 +24,7 @@
 
 
             {{-- + Add Account --}}
-            <a href="#" id="navAddBtn"
+            <a href="#" id="navAddBtn" onclick="openAddModal(); return false;"
                class="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-[13px] font-semibold rounded-[10px] no-underline transition-all duration-150 hover:-translate-y-px hover:shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-900/40">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
                     <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <a href="#" id="mobileAddBtn"
+        <a href="#" id="mobileAddBtn" onclick="openAddModal(); return false;"
            class="flex items-center gap-2.5 w-full px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl no-underline text-[14px] font-semibold transition-all duration-150">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
                 <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>

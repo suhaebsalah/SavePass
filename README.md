@@ -1,3 +1,27 @@
+CREATE TABLE accounts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+
+    service_name VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    password TEXT NULL,
+    url VARCHAR(255) NULL,
+
+    account_type ENUM('website','app') DEFAULT 'website',
+
+    notes TEXT NULL,
+
+    created_at TIMESTAMP NULL,
+    updated_at TIMESTAMP NULL
+);
+
+users table
+    ↓
+accounts table
+(واحد إلى كثير)
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -57,3 +81,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# SavePass 🔐
+
+SavePass is a simple password manager web application built with Laravel, JavaScript, and CSS.
+
+## 🚀 Features
+
+- User authentication (Login / Register)
+- Secure password storage
+- Encrypted data handling
+- Simple and clean UI design
+- Responsive design for mobile and desktop
+
+## 🛠️ Built With
+
+- Laravel (PHP Framework)
+- JavaScript
+- HTML / CSS
+- MySQL
+
+## 📦 Installation
+
+Clone the project:
+
+```bash
+git clone https://github.com/your-username/savepass.git
+cd savepass

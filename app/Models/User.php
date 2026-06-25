@@ -7,6 +7,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class User extends Authenticatable
 {
@@ -22,7 +23,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'otp_code',
+        'otp_expires_at',
     ];
+
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -44,6 +49,13 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'otp_expires_at' => 'datetime',
         ];
+    }
+
+    //this function defines the relationship between User and Account models, indicating that a user can have many accounts
+    public function accounts()
+    {
+        return $this->hasMany(Account::class);
     }
 }
